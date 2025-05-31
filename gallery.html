@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Studio - Professional Recording Spaces</title>
+    <link rel="icon" type="image/png" href="PODCAST (1).png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+</head>
+<body>
+    <div id="main">
+        <div class="menu-overlay"></div>
+        <div id="nav">
+            <div id="nav1">
+                <a href="index.html"><img src="PODCAST (1).png" alt="logo img"></a>
+            </div>
+            <div id="nav2">
+                <a href="index.html">Home</a>
+                <a href="gallery.html" class="active">Studio Gallery</a>
+                <a href="https://wa.me/+919427027923" target="_blank" class="contact-btn">Contact</a>
+            </div>
+            <div id="mobile-menu-btn">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="gallery-hero">
+            <div class="hero-content">
+                <h1>Explore Our <span>Studios</span></h1>
+                <p>Professional recording spaces designed for exceptional audio quality and creative comfort</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">6+</span>
+                        <span class="stat-text">Premium Studios</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-text">Availability</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-text">Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="./S-img/05/01.JPG" alt="Studio Hero Image">
+                <div class="hero-overlay"></div>
+            </div>
+        </div>
+        
+        <div id="gallery-filter-container">
+            <h2>Find Your Ideal <span>Recording Space</span></h2>
+            <div id="gallery-filter">
+                <button class="filter-btn active" data-filter="all">All Studios</button>
+                <button class="filter-btn" data-filter="premium">Premium</button>
+                <button class="filter-btn" data-filter="standard">Standard</button>
+                <button class="filter-btn" data-filter="interview">Interview</button>
+            </div>
+        </div>
+        
+        <div id="gallery-grid">
+            <!-- Studio 1 -->
+            <div class="gallery-item premium">
+                <div class="gallery-img">
+                    <img src="./S-img/05/01.JPG" alt="Premium Studio">
+                    <div class="studio-tag">Premium</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Apex</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <span>(32 reviews)</span>
+                    </div>
+                    <p>Our flagship premium recording studio with top-of-the-line acoustic treatment and equipment.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Premium Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 4-6 People</span>
+                        <span><i class="ri-soundcloud-line"></i> Soundproof</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$120</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Studio 2 -->
+            <div class="gallery-item standard">
+                <div class="gallery-img">
+                    <img src="./S-img/01/01.JPG" alt="Standard Studio" style="object-fit: cover; object-position: 20% 20%;">
+                    <div class="studio-tag">Standard</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Echo</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <span>(24 reviews)</span>
+                    </div>
+                    <p>Perfect for solo recordings and small podcasts with excellent sound quality.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Standard Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 2-3 People</span>
+                        <span><i class="ri-soundcloud-line"></i> Acoustic Treatment</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$85</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Studio 3 -->
+            <div class="gallery-item interview">
+                <div class="gallery-img">
+                    <img src="./S-img/02/01.JPG" alt="Interview Studio" style="object-fit: cover; object-position: 20% 80%;">
+                    <div class="studio-tag">Interview</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Dialogue</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <span>(41 reviews)</span>
+                    </div>
+                    <p>Specialized for interviews with comfortable seating and multi-channel recording.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Interview Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 2-4 People</span>
+                        <span><i class="ri-vidicon-line"></i> Video Available</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$95</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Studio 4 -->
+            <div class="gallery-item premium">
+                <div class="gallery-img">
+                    <img src="./S-img/03/01.JPG" alt="Premium Studio">
+                    <div class="studio-tag">Premium</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Pinnacle</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-line"></i>
+                        <span>(19 reviews)</span>
+                    </div>
+                    <p>High-end studio with 360° acoustic treatment and broadcast-quality equipment.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Premium Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 4-8 People</span>
+                        <span><i class="ri-vidicon-line"></i> 4K Video</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$145</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Studio 5 -->
+            <div class="gallery-item standard">
+                <div class="gallery-img">
+                    <img src="./S-img/04/01.JPG" alt="Standard Studio" style="object-position: 20% 30%;">
+                    <div class="studio-tag">Standard</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Harmony</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                        <span>(28 reviews)</span>
+                    </div>
+                    <p>Well-balanced acoustic environment for crystal clear voice recordings.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Standard Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 2-4 People</span>
+                        <span><i class="ri-computer-line"></i> Editing Station</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$75</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Studio 6 -->
+            <div class="gallery-item interview">
+                <div class="gallery-img">
+                    <img src="./S-img/05/01.JPG" alt="Interview Studio">
+                    <div class="studio-tag">Interview</div>
+                    <div class="studio-overlay">
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                </div>
+                <div class="gallery-info">
+                    <h3>Studio Connect</h3>
+                    <div class="gallery-rating">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-line"></i>
+                        <span>(35 reviews)</span>
+                    </div>
+                    <p>Comfortable interview space with remote guest connectivity and high-quality recording.</p>
+                    <div class="studio-features">
+                        <span><i class="ri-mic-line"></i> Interview Mics</span>
+                        <span><i class="ri-user-voice-line"></i> 2-6 People</span>
+                        <span><i class="ri-global-line"></i> Remote Guests</span>
+                    </div>
+                    <div class="studio-price">
+                        <span class="price">$90</span>
+                        <span class="period">/ hour</span>
+                    </div>
+                    <button class="book-btn" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">
+                        Book Now <i class="ri-arrow-right-line"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <div id="gallery-cta">
+            <div class="cta-content">
+                <h2>Ready to Record Your <span>Next Episode?</span></h2>
+                <p>Contact us to schedule a studio tour or book your recording session</p>
+                <button onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to know more about booking the studio.'">
+                    Book Your Session Now <i class="ri-arrow-right-line"></i>
+                </button>
+            </div>
+            <div class="cta-decoration">
+                <img src="starburst-four-point-icon.png" alt="stare icon">
+            </div>
+        </div>
+        
+        <div id="footer">
+            <div class="footer-container">
+                <div class="footer-logo">
+                    <img src="PODCAST (1).png" alt="logo img">
+                    <p>Transform your podcast ideas into professional audio content with our state-of-the-art studios.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Studio Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="ri-map-pin-line"></i> 123 Podcast Lane, Studio City</p>
+                    <p><i class="ri-phone-line"></i> (555) 123-4567</p>
+                    <p><i class="ri-mail-line"></i> info@podcaststudio.com</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                        <a href="#"><i class="ri-facebook-circle-line"></i></a>
+                        <a href="#"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#"><i class="ri-spotify-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Podcast Studio. All Rights Reserved.</p>
+            </div>
+        </div>
+
+        <!-- Modal for Quick View -->
+        <div id="studio-modal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-gallery">
+                    <img id="modal-main-img" src="./studio/001.webp" alt="Studio">
+                    <div class="modal-thumbnails">
+                        <img src="./studio/001.webp" alt="Thumbnail 1" class="active">
+                        <img src="./studio/002.webp" alt="Thumbnail 2">
+                        <img src="./studio/003.webp" alt="Thumbnail 3">
+                    </div>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Studio Apex</h2>
+                    <div class="modal-tags">
+                        <span class="modal-tag">Premium</span>
+                        <div class="modal-rating">
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <i class="ri-star-fill"></i>
+                            <span>(32)</span>
+                        </div>
+                    </div>
+                    <p id="modal-description">Our flagship premium recording studio with top-of-the-line acoustic treatment and equipment. Designed for professional podcasters and content creators.</p>
+                    <div class="modal-features">
+                        <div class="feature-item">
+                            <i class="ri-mic-line"></i>
+                            <div>
+                                <h4>Equipment</h4>
+                                <p>Premium Neumann & Shure Microphones</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-user-voice-line"></i>
+                            <div>
+                                <h4>Capacity</h4>
+                                <p>4-6 People</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-soundcloud-line"></i>
+                            <div>
+                                <h4>Acoustics</h4>
+                                <p>Professional Soundproofing</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <i class="ri-computer-line"></i>
+                            <div>
+                                <h4>Extras</h4>
+                                <p>Mixing Console, DAW, Monitoring</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-pricing">
+                        <div class="pricing-item">
+                            <h4>Hourly Rate</h4>
+                            <p>$120/hour</p>
+                        </div>
+                        <div class="pricing-item">
+                            <h4>Half Day (4 hrs)</h4>
+                            <p>$400</p>
+                        </div>
+                        <div class="pricing-item">
+                            <h4>Full Day (8 hrs)</h4>
+                            <p>$750</p>
+                        </div>
+                    </div>
+                    <div class="modal-buttons">
+                        <button class="modal-book" onclick="window.location.href='https://wa.me/+919427027923?text=Hi, I would like to book the studio.'">Book Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('nav-scrolled');
+            } else {
+                nav.classList.remove('nav-scrolled');
+            }
+        });
+        
+        // Mobile menu toggle with overlay
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const nav2 = document.getElementById('nav2');
+        const menuOverlay = document.querySelector('.menu-overlay');
+        
+        function toggleMenu() {
+            nav2.classList.toggle('mobile-active');
+            mobileMenuBtn.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+            document.body.style.overflow = nav2.classList.contains('mobile-active') ? 'hidden' : '';
+        }
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        menuOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu when clicking menu items
+        const menuLinks = nav2.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (nav2.classList.contains('mobile-active')) {
+                    toggleMenu();
+                }
+            });
+        });
+        
+        // Gallery filtering
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                galleryItems.forEach(item => {
+                    if (filterValue === 'all' || item.classList.contains(filterValue)) {
+                        item.style.display = 'flex';
+                        setTimeout(() => {
+                            item.style.opacity = '1';
+                            item.style.transform = 'translateY(0)';
+                        }, 100);
+                    } else {
+                        item.style.opacity = '0';
+                        item.style.transform = 'translateY(20px)';
+                        setTimeout(() => {
+                            item.style.display = 'none';
+                        }, 400);
+                    }
+                });
+            });
+        });
+        
+        // Modal functionality with unique content for each studio
+        const modal = document.getElementById('studio-modal');
+        const quickViewBtns = document.querySelectorAll('.quick-view-btn');
+        const closeModal = document.querySelector('.close-modal');
+        const modalMainImg = document.getElementById('modal-main-img');
+        const modalTitle = document.getElementById('modal-title');
+        const modalDescription = document.getElementById('modal-description');
+        const modalTag = document.querySelector('.modal-tag');
+        const modalRating = document.querySelector('.modal-rating span');
+        
+        // Studio data objects
+        const studioData = {
+            'Studio Apex': {
+                title: 'Studio Apex',
+                tagType: 'Premium',
+                rating: '(32)',
+                description: 'Our flagship premium recording studio with top-of-the-line acoustic treatment and equipment. Designed for professional podcasters and content creators who demand the best.',
+                mainImage: './S-img/05/01.JPG',
+                thumbnails: ['./S-img/05/01.JPG', './S-img/05/02.JPG', './S-img/05/03.JPG'],
+                equipment: 'Premium Neumann & Shure Microphones',
+                capacity: '4-6 People',
+                acoustics: 'Professional Soundproofing',
+                extras: 'Mixing Console, DAW, Monitoring',
+                hourlyRate: '$120/hour',
+                halfDay: '$400',
+                fullDay: '$750'
+            },
+            'Studio Echo': {
+                title: 'Studio Echo',
+                tagType: 'Standard',
+                rating: '(24)',
+                description: 'Perfect for solo recordings and small podcasts with excellent sound quality. A comfortable, acoustically treated space that balances quality and affordability.',
+                mainImage: './S-img/01/01.JPG',
+                thumbnails: ['./S-img/01/01.JPG', './S-img/01/02.JPG', './S-img/01/03.JPG'],
+                equipment: 'Rode & Audio-Technica Mics',
+                capacity: '2-3 People',
+                acoustics: 'Acoustic Panels & Baffles',
+                extras: 'Basic Mixing Equipment, Headphones',
+                hourlyRate: '$85/hour',
+                halfDay: '$300',
+                fullDay: '$550'
+            },
+            'Studio Dialogue': {
+                title: 'Studio Dialogue',
+                tagType: 'Interview',
+                rating: '(41)',
+                description: 'Specialized for interviews with comfortable seating, multi-channel recording, and optimized acoustics for natural conversation flow. Perfect for podcast interviews and panel discussions.',
+                mainImage: './S-img/02/01.JPG',
+                thumbnails: ['./S-img/02/01.JPG', './S-img/02/02.JPG', './S-img/02/03.JPG'],
+                equipment: 'Shure SM7B & Wireless Lavalier Mics',
+                capacity: '2-4 People',
+                acoustics: 'Conversation-Optimized Space',
+                extras: 'Video Recording, Remote Guest Connection',
+                hourlyRate: '$95/hour',
+                halfDay: '$350',
+                fullDay: '$650'
+            },
+            'Studio Pinnacle': {
+                title: 'Studio Pinnacle',
+                tagType: 'Premium',
+                rating: '(19)',
+                description: 'High-end studio with 360° acoustic treatment and broadcast-quality equipment. Our most spacious studio suitable for larger productions and professional broadcasts.',
+                mainImage: './S-img/03/01.JPG',
+                thumbnails: ['./S-img/03/01.JPG', './S-img/03/02.JPG', './S-img/03/03.JPG'],
+                equipment: 'Full Suite of Premium Microphones',
+                capacity: '4-8 People',
+                acoustics: 'Full Room Treatment & Isolation',
+                extras: '4K Video Recording, Multi-Track Recording',
+                hourlyRate: '$145/hour',
+                halfDay: '$500',
+                fullDay: '$900'
+            },
+            'Studio Harmony': {
+                title: 'Studio Harmony',
+                tagType: 'Standard',
+                rating: '(28)',
+                description: 'Well-balanced acoustic environment for crystal clear voice recordings. Features an integrated editing station for immediate post-production work.',
+                mainImage: './S-img/04/01.JPG',
+                thumbnails: ['./S-img/04/01.JPG', './S-img/04/02.JPG', './S-img/04/03.JPG'],
+                equipment: 'Audio-Technica & AKG Microphones',
+                capacity: '2-4 People',
+                acoustics: 'Balanced Room Treatment',
+                extras: 'Editing Workstation, Sound Effects Library',
+                hourlyRate: '$75/hour',
+                halfDay: '$280',
+                fullDay: '$500'
+            },
+            'Studio Connect': {
+                title: 'Studio Connect',
+                tagType: 'Interview',
+                rating: '(35)',
+                description: 'Comfortable interview space with remote guest connectivity and high-quality recording. Specialized for podcasts that feature remote guests with seamless integration.',
+                mainImage: './S-img/05/01.JPG',
+                thumbnails: ['./S-img/05/01.JPG', './S-img/05/02.JPG', './S-img/05/03.JPG'],
+                equipment: 'Rode Procaster & Remote Audio System',
+                capacity: '2-6 People',
+                acoustics: 'Conversation-Focused Acoustics',
+                extras: 'Remote Guest System, Call Recording',
+                hourlyRate: '$90/hour',
+                halfDay: '$320',
+                fullDay: '$600'
+            }
+        };
+        
+        // Update modal content based on studio
+        function updateModalContent(studioName) {
+            const studio = studioData[studioName];
+            if (!studio) return;
+            
+            // Update basic info
+            modalTitle.textContent = studio.title;
+            modalTag.textContent = studio.tagType;
+            modalRating.textContent = studio.rating;
+            modalDescription.textContent = studio.description;
+            modalMainImg.src = studio.mainImage;
+            
+            // Update thumbnails
+            const thumbnailContainer = document.querySelector('.modal-thumbnails');
+            thumbnailContainer.innerHTML = '';
+            studio.thumbnails.forEach((thumb, index) => {
+                const thumbImg = document.createElement('img');
+                thumbImg.src = thumb;
+                thumbImg.alt = `Thumbnail ${index + 1}`;
+                if (index === 0) thumbImg.classList.add('active');
+                thumbImg.addEventListener('click', function() {
+                    document.querySelectorAll('.modal-thumbnails img').forEach(t => t.classList.remove('active'));
+                    this.classList.add('active');
+                    modalMainImg.src = this.src;
+                });
+                thumbnailContainer.appendChild(thumbImg);
+            });
+            
+            // Update features
+            document.querySelector('.feature-item:nth-child(1) p').textContent = studio.equipment;
+            document.querySelector('.feature-item:nth-child(2) p').textContent = studio.capacity;
+            document.querySelector('.feature-item:nth-child(3) p').textContent = studio.acoustics;
+            document.querySelector('.feature-item:nth-child(4) p').textContent = studio.extras;
+            
+            // Update pricing
+            document.querySelector('.pricing-item:nth-child(1) p').textContent = studio.hourlyRate;
+            document.querySelector('.pricing-item:nth-child(2) p').textContent = studio.halfDay;
+            document.querySelector('.pricing-item:nth-child(3) p').textContent = studio.fullDay;
+
+            // Update Book Now button with studio-specific message
+            const modalBook = document.querySelector('.modal-book');
+            modalBook.onclick = function() {
+                window.location.href = `https://wa.me/+919427027923?text=Hi, I would like to book ${studio.title}. Details:%0A- Type: ${studio.tagType}%0A- Capacity: ${studio.capacity}`;
+            };
+        }
+        
+        // Add event listeners to quick view buttons
+        quickViewBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const studioCard = this.closest('.gallery-item');
+                const studioName = studioCard.querySelector('h3').textContent;
+                
+                updateModalContent(studioName);
+                
+                modal.style.display = 'flex';
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        closeModal.addEventListener('click', function() {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        });
+        
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+        });
+        
+        // Add hover effect to all buttons for consistent experience
+        const buttons = document.querySelectorAll('button');
+        buttons.forEach(button => {
+            button.addEventListener('mouseenter', function() {
+                this.style.transition = 'all 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html> 
