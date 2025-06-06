@@ -220,13 +220,20 @@ body {
     animation-fill-mode: forwards;
 }
 
-#hero video{
+#hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1vw;
+}
+
+/* #hero video{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: top;
     border-radius: 1vw;
-}
+} */
 
 #about {
     margin-top: 2.5vw;
@@ -1546,7 +1553,8 @@ body {
 }
 
 .modal-pricing {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: space-between;
     margin-bottom: 30px;
     background-color: #f9f9f9;
@@ -2254,7 +2262,8 @@ body {
     }
     
     .modal-pricing {
-        display: grid;
+        display: none;
+        /* display: grid; */
         grid-template-columns: repeat(3, 1fr);
         gap: 1px;
         padding: 0px;
@@ -2315,6 +2324,7 @@ body {
 /* For very small screens */
 @media (max-width: 380px) {
     .modal-pricing {
+        display: none;
         grid-template-columns: 1fr;
         gap: 8px;
     }
