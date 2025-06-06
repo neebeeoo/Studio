@@ -220,20 +220,20 @@ body {
     animation-fill-mode: forwards;
 }
 
-#hero img {
+/* #hero img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 1vw;
-}
+} */
 
-/* #hero video{
+#hero video{
     height: 100%;
     width: 100%;
     object-fit: cover;
     object-position: top;
     border-radius: 1vw;
-} */
+}
 
 #about {
     margin-top: 2.5vw;
