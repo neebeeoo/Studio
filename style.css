@@ -214,10 +214,11 @@ body {
     margin-top: 5px;
     width: 100%;
     height: 90%;
-    /* background-color: lightgreen; */
+    background-color: lightgreen;
     animation: fadeIn 1s ease 0.3s forwards;
     opacity: 0;
     animation-fill-mode: forwards;
+    overflow: hidden;
 }
 
 /* #hero img {
@@ -2480,4 +2481,52 @@ body.menu-open {
 .menu-overlay.active {
     opacity: 1;
     visibility: visible;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #nav2 a {
+        text-decoration: none;
+        font-size: 1.7vw;
+        font-weight: 600;
+        font-family: Manrope;
+        color: #000;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    #about-right h4 {
+        /* background-color: pink; */
+        width: 80%;
+        font-size: 1.5vw;
+        font-weight: 500;
+        color: #333;
+        line-height: 1.8vw;
+    }
+    #std-1 {
+        /* background-color: red; */
+        display: flex;
+        position: relative;
+    }
+
+    #std-1 h5{
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.5vw;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    #std-1 img {
+        width: 1.6vw;
+        height: 1.6vw;
+        margin-left: 12px;
+    }
+
+    #std-line {
+        position: absolute;
+        margin-left: 12px;
+        width: 16vw;
+        border-bottom: 0.8px solid #fff;
+        right: 56%;
+        bottom: 43%;
+    }
 }
