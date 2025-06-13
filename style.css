@@ -2524,10 +2524,10 @@ body.menu-open {
     #std-line {
         position: absolute;
         margin-left: 10px;
-        width: 20vw;
+        width: 18vw;
         border-bottom: 0.8px solid #fff;
         right: 48%;
-        bottom: 42%;
+        bottom: 44%;
     }
 }
 
