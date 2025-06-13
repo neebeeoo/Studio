@@ -2529,7 +2529,14 @@ body.menu-open {
         right: 48%;
         bottom: 47%;
     }
-        
+	
+    .social-icons {
+        display: flex;
+        margin-top: 2vw;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+	
     .social-icons a {
         display: flex;
         justify-content: center;
