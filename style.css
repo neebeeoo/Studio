@@ -2523,10 +2523,41 @@ body.menu-open {
 
     #std-line {
         position: absolute;
-        margin-left: 12px;
-        width: 16vw;
+        margin-left: 10px;
+        width: 20vw;
         border-bottom: 0.8px solid #fff;
-        right: 56%;
-        bottom: 43%;
+        right: 48%;
+        bottom: 42%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) {
+    #std-1 {
+        /* background-color: red; */
+        display: flex;
+        position: relative;
+    }
+
+    #std-1 h5{
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 0.5vw;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    #std-1 img {
+        width: 1.6vw;
+        height: 1.6vw;
+        margin-left: 12px;
+    }
+
+    #std-line {
+        position: absolute;
+        margin-left: 5px;
+        width: 20vw;
+        border-bottom: 0.8px solid #fff;
+        right: 50%;
+        bottom: 42%;
     }
 }
