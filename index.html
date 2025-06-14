@@ -3,16 +3,78 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podcast Studio - Professional Recording Spaces</title>
-    <link rel="icon" type="image/png" href="PODCAST (1).png">
+    <title>Podcast Studio - Professional Recording Spaces in Surat | My Pod Studio</title>
+    <meta name="description" content="Professional podcast studio rental in Surat. State-of-the-art recording spaces, high-end equipment, and soundproof environments for your podcast production needs.">
+    <meta name="keywords" content="podcast studio, recording studio, podcast recording, studio rental, Surat, audio production, soundproof studio">
+    <meta name="author" content="My Pod Studio">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mypodstudio.com/">
+    <meta property="og:title" content="Podcast Studio - Professional Recording Spaces in Surat">
+    <meta property="og:description" content="Professional podcast studio rental in Surat. State-of-the-art recording spaces, high-end equipment, and soundproof environments.">
+    <meta property="og:image" content="PODCAST (1).png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://mypodstudio.com/">
+    <meta property="twitter:title" content="Podcast Studio - Professional Recording Spaces in Surat">
+    <meta property="twitter:description" content="Professional podcast studio rental in Surat. State-of-the-art recording spaces, high-end equipment, and soundproof environments.">
+    <meta property="twitter:image" content="PODCAST (1).png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://mypodstudio.com/">
+
+    <link rel="icon" type="image/png" href="icon.png">
     <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <link
     href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
     rel="stylesheet"
     />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "My Pod Studio",
+        "image": "PODCAST (1).png",
+        "description": "Professional podcast studio rental in Surat. State-of-the-art recording spaces, high-end equipment, and soundproof environments.",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "12-15 PURSHOTTAM NAGAR, NEAR SHYAM DHAM TEMPLE, JAKATNAKA",
+            "addressLocality": "Surat",
+            "addressRegion": "Gujarat",
+            "postalCode": "395006",
+            "addressCountry": "IN"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "21.1702",
+            "longitude": "72.8311"
+        },
+        "url": "https://mypodstudio.com",
+        "telephone": "+917069380035",
+        "priceRange": "₹₹",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday"
+            ],
+            "opens": "10:00",
+            "closes": "20:00"
+        }
+    }
+    </script>
 </head>
 <body>
     <div id="main">
@@ -35,8 +97,9 @@
             </div>
         </div>
         <div id="hero">
-            <video autoplay muted playsinline loop preload="auto">
+            <video autoplay muted playsinline loop preload="auto" webkit-playsinline="true" x5-playsinline="true" x5-video-player-type="h5" x5-video-player-fullscreen="true">
                 <source src="./podcast-intro.mp4" type="video/mp4">
+                <source src="./podcast-intro.webm" type="video/webm">
                 Your browser does not support the video tag.
             </video>
         </div>
@@ -93,6 +156,9 @@
                 <button onclick="window.location.href='gallery.html'">ViewAll studios<i class="ri-arrow-right-line"></i></button>
             </div>
             <div class="slider-wrapper">
+                <button class="slider-arrow left-arrow" onclick="moveSlider('left')">
+                    <i class="ri-arrow-left-s-line"></i>
+                </button>
                 <div class="slider">
                     <img id="slide-1" src="./S-img/05/01.jpg" alt="" />
                     <img id="slide-2" src="./S-img/02/01.jpg" alt="" / style="object-position: 20% 80%;">
@@ -101,6 +167,9 @@
                     <img id="slide-5" src="./S-img/05/01.jpg" alt="" />
                     <img id="slide-6" src="./S-img/01/01.jpg" alt="" / style="object-position: 20% 30%;">
                 </div>
+                <button class="slider-arrow right-arrow" onclick="moveSlider('right')">
+                    <i class="ri-arrow-right-s-line"></i>
+                </button>
                 <div class="slider-nav">
                     <a href="#slide-1"></a>
                     <a href="#slide-2"></a>
@@ -109,12 +178,12 @@
                     <a href="#slide-5"></a>
                     <a href="#slide-6"></a>
                 </div>
-	        </div>
+            </div>
         </div>
         <div id="footer">
             <div class="footer-container">
                 <div class="footer-logo">
-                    <img src="PODCAST (1).png" alt="logo img">
+                    <img src="footer.png" alt="logo img">
                     <p>Transform your podcast ideas into professional audio content with our state-of-the-art studios.</p>
                 </div>
                 <div class="footer-links">
@@ -208,6 +277,32 @@
                 document.body.classList.add('modal-open');
             });
         });
+
+        // Slider navigation
+        let currentSlide = 1;
+        const totalSlides = 6;
+
+        function moveSlider(direction) {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slider img');
+            
+            if (direction === 'right') {
+                currentSlide = currentSlide === totalSlides ? 1 : currentSlide + 1;
+            } else {
+                currentSlide = currentSlide === 1 ? totalSlides : currentSlide - 1;
+            }
+
+            // Update slider position
+            slider.style.transform = `translateX(-${(currentSlide - 1) * 100}%)`;
+            
+            // Update navigation dots
+            document.querySelectorAll('.slider-nav a').forEach((dot, index) => {
+                dot.classList.toggle('active', index + 1 === currentSlide);
+            });
+        }
+
+        // Initialize first slide
+        document.querySelector('.slider-nav a').classList.add('active');
     </script>
 </body>
 </html>
