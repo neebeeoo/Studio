@@ -2,6 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Manrope, sans-serif !important;
+    font-style: normal !important;
 }
 
 /* Custom Scrollbar Styles */
@@ -98,7 +100,8 @@ body {
     text-decoration: none;
     font-size: 1.2vw;
     font-weight: 600;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif !important;
+    font-style: normal !important;
     color: #000;
     position: relative;
     transition: all 0.3s ease;
@@ -214,7 +217,7 @@ body {
     margin-top: 5px;
     width: 100%;
     height: 90%;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     animation: fadeIn 1s ease 0.3s forwards;
     opacity: 0;
     animation-fill-mode: forwards;
@@ -261,9 +264,10 @@ body {
 #about-left h2 {
     padding-left: 1.5px;
     width: 70%;
-    font-size: 2.2vw;
-    font-family: Manrope;
+    font-size: 2vw;
+    font-family: Manrope, sans-serif !important;
     font-weight: 500;
+    font-style: normal !important;
     padding-right: 2px;
     /* background-color: aqua; */
     /* display: flex; */
@@ -312,7 +316,9 @@ body {
     /* background-color: pink; */
     width: 80%;
     font-size: 1.3vw;
+    font-family: Manrope, sans-serif !important;
     font-weight: 500;
+    font-style: normal !important;
     color: #333;
     line-height: 1.8vw;
 }
@@ -467,6 +473,8 @@ body {
     letter-spacing: 0.5vw;
     font-weight: 500;
     font-size: 14px;
+    font-family: Manrope, sans-serif !important;
+    font-style: normal !important;
 }
 
 #std-1 img {
@@ -495,7 +503,8 @@ body {
     color: white;
     font-size: 2.5vw;
     font-weight: 500;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif !important;
+    font-style: normal !important;
 }
 
 #std-2 h3 span {
@@ -559,56 +568,98 @@ body {
 
 .slider-wrapper {
 	position: relative;
-	max-width: 75rem;
-	margin: 0 auto;
+	width: 100%;
+	overflow: hidden;
+	border-radius: 20px;
 }
 
+.slider-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	background: rgba(255, 255, 255, 0.8);
+	border: none;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+	transition: all 0.3s ease;
+}
+
+.slider-arrow:hover {
+	background: rgba(255, 255, 255, 1);
+}
+
+.slider-arrow i {
+	font-size: 24px;
+	color: #333;
+}
+
+.left-arrow {
+	left: 20px;
+}
+
+.right-arrow {
+	right: 20px;
+}
+
+/* Hide arrows on mobile and tablet */
+@media screen and (max-width: 1023px) {
+    .slider-arrow {
+        display: none;
+    }
+}
+
+/* Show arrows for desktop and larger tablets */
+@media screen and (min-width: 1024px) {
+    .slider-arrow {
+        display: flex;
+    }
+}
+
+/* Adjust arrow size for medium screens */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+    .slider-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .slider-arrow i {
+        font-size: 20px;
+    }
+    
+    .left-arrow {
+        left: 15px;
+    }
+    
+    .right-arrow {
+        right: 15px;
+    }
+}
+
+/* Ensure smooth sliding animation */
 .slider {
 	display: flex;
-	height: 40vw;
-    width: 100%;
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	scroll-behavior: smooth;
-	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
-    border-radius: 1.5vw;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.slider::-webkit-scrollbar {
-	display: none;
+	transition: transform 0.5s ease;
+	border-radius: 20px;
 }
 
 .slider img {
-	flex: 1 0 100%;
-	scroll-snap-align: start;
+	flex: 0 0 100%;
+	width: 100%;
+	height: 100%;
 	object-fit: cover;
+	border-radius: 20px;
 }
 
-.slider-nav {
-	display: flex;
-	column-gap: 1rem;
-	position: absolute;
-	bottom: 1.25rem;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 1;
-}
-
-.slider-nav a {
-	width: 0.5rem;
-	height: 0.5rem;
-	border-radius: 50%;
-	background-color: #fff;
-	opacity: 0.75;
-	transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-	opacity: 1;
+/* Active state for navigation dots */
+.slider-nav a.active {
+	background: #fff;
+	transform: scale(1.2);
 }
 
 /* Footer Styling */
@@ -633,16 +684,16 @@ body {
 }
 
 .footer-logo img {
-    width: 4vw;
-    margin-bottom: 1.5vw;
+    width: 8vw;
 }
 
 .footer-logo p {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif !important;
     font-size: 1vw;
     line-height: 1.6vw;
     opacity: 0.8;
     width: 80%;
+    font-style: normal !important;
 }
 
 .footer-links {
@@ -650,10 +701,11 @@ body {
 }
 
 .footer-links h4, .footer-contact h4 {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif !important;
     font-size: 1.2vw;
     margin-bottom: 1.5vw;
     position: relative;
+    font-style: normal;
 }
 
 .footer-links h4:after, .footer-contact h4:after {
@@ -677,10 +729,11 @@ body {
 .footer-links ul li a {
     color: #fff;
     text-decoration: none;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-size: 1vw;
     opacity: 0.8;
     transition: all 0.3s ease;
+    font-style: normal;
 }
 
 .footer-links ul li a:hover {
@@ -693,12 +746,13 @@ body {
 }
 
 .footer-contact p {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-size: 1vw;
     margin-bottom: 1vw;
     display: flex;
     align-items: center;
     opacity: 0.8;
+    font-style: normal;
 }
 
 .footer-contact p i {
@@ -747,9 +801,10 @@ body {
 }
 
 .footer-bottom p {
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-size: 0.9vw;
     opacity: 0.7;
+    font-style: normal;
 }
 
 /* Mobile Responsiveness */
@@ -769,8 +824,7 @@ body {
     }
     
     .footer-logo img {
-        width: 40px;
-        margin-bottom: 15px;
+        width: 80px;
     }
     
     .footer-logo p {
@@ -930,7 +984,7 @@ body {
 
 #gallery-hero h1 {
     font-size: 3.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     margin-bottom: 1.5vw;
     color: #000;
@@ -943,7 +997,7 @@ body {
 
 #gallery-hero p {
     font-size: 1.2vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     color: #666;
     margin-bottom: 3vw;
     width: 90%;
@@ -963,13 +1017,13 @@ body {
     font-size: 2.5vw;
     font-weight: 700;
     color: #000;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .stat-text {
     font-size: 0.9vw;
     color: #666;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 #gallery-filter-container {
@@ -980,7 +1034,7 @@ body {
 
 #gallery-filter-container h2 {
     font-size: 2.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 2vw;
 }
 
@@ -990,7 +1044,8 @@ body {
 }
 
 #gallery-filter {
-    display: flex;
+    display: none;
+    /* display: flex; */
     justify-content: center;
     gap: 1vw;
     margin: 0 auto;
@@ -1005,7 +1060,7 @@ body {
     border: 1px solid #ddd;
     border-radius: 30px;
     text-transform: uppercase;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1074,7 +1129,7 @@ body {
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 1vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     z-index: 5;
 }
@@ -1103,7 +1158,7 @@ body {
     color: #000;
     border: none;
     border-radius: 25px;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1131,7 +1186,7 @@ body {
 
 .gallery-info h3 {
     font-size: 1.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 0.5vw;
 }
 
@@ -1151,7 +1206,7 @@ body {
     font-size: 0.8vw;
     color: #666;
     margin-left: 0.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .gallery-info p {
@@ -1159,7 +1214,7 @@ body {
     line-height: 1.5vw;
     color: #666;
     margin-bottom: 1.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .studio-features {
@@ -1177,7 +1232,7 @@ body {
     border-radius: 20px;
     display: flex;
     align-items: center;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .studio-features span i {
@@ -1196,14 +1251,14 @@ body {
     font-size: 1.8vw;
     font-weight: 700;
     color: #000;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .studio-price .period {
     font-size: 0.9vw;
     color: #666;
     margin-left: 0.3vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .book-btn {
@@ -1221,7 +1276,7 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     z-index: 1;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
 }
 
@@ -1287,7 +1342,7 @@ body {
 
 #gallery-cta h2 {
     font-size: 2.5vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 1vw;
 }
 
@@ -1300,7 +1355,7 @@ body {
     font-size: 1vw;
     color: rgba(255, 255, 255, 0.8);
     margin-bottom: 2vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 #gallery-cta button {
@@ -1317,7 +1372,7 @@ body {
     overflow: hidden;
     transition: all 0.3s ease;
     z-index: 1;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
 }
 
@@ -1412,14 +1467,14 @@ body {
     position: absolute;
     top: 18px;
     right: 20px;
-    font-size: 28px;
+    font-size: 26px;
     cursor: pointer;
     color: #000000;
     z-index: 10;
     transition: all 0.3s ease;
     background-color: #fff;
     opacity: 40%;
-    padding: 2px 10px;
+    padding: 2px 12px;
     border-radius: 50%;
 }
 
@@ -1474,7 +1529,7 @@ body {
 
 #modal-title {
     font-size: 2vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 15px;
 }
 
@@ -1491,7 +1546,7 @@ body {
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 0.8vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     margin-right: 15px;
 }
@@ -1515,7 +1570,7 @@ body {
     font-size: 0.8vw;
     color: #666;
     margin-left: 2px;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 #modal-description {
@@ -1523,7 +1578,7 @@ body {
     line-height: 1.6vw;
     color: #666;
     margin-bottom: 30px;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .modal-features {
@@ -1543,14 +1598,14 @@ body {
 
 .feature-item h4 {
     font-size: 1vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 5px;
 }
 
 .feature-item p {
     font-size: 0.8vw;
     color: #666;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .modal-pricing {
@@ -1565,7 +1620,7 @@ body {
 
 .pricing-item h4 {
     font-size: 0.8vw;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     margin-bottom: 5px;
     color: #666;
 }
@@ -1573,7 +1628,7 @@ body {
 .pricing-item p {
     font-size: 1.2vw;
     font-weight: 700;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
 }
 
 .modal-buttons {
@@ -1589,7 +1644,7 @@ body {
     border: none;
     border-radius: 25px;
     flex: 1;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1603,7 +1658,7 @@ body {
     border: 1px solid #000;
     border-radius: 25px;
     flex: 1;
-    font-family: Manrope;
+    font-family: Manrope, sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1650,7 +1705,7 @@ body {
         padding: 5px 12px;
         border-radius: 20px;
         font-size: 1.8vw;
-        font-family: Manrope;
+        font-family: Manrope, sans-serif;
         font-weight: 600;
         z-index: 5;
     }
@@ -1695,8 +1750,8 @@ body {
     #about-left h2 {
         padding-left: 1.5px;
         width: 100%;
-        font-size: 5.5vw;
-        font-family: Manrope;
+        font-size: 5vw;
+        font-family: Manrope, sans-serif;
         font-weight: 500;
         padding-right: 2px;
         /* background-color: aqua; */
@@ -1740,7 +1795,7 @@ body {
         /* background-color: pink; */
         width: 200%;
         height: 30%;
-        font-size: 3.8vw;
+        font-size: 3.1vw;
         font-weight: 500;
         color: #333;
         line-height: 4vw;
@@ -1895,8 +1950,8 @@ body {
         color: white;
         text-transform: uppercase;
         letter-spacing: 0.8vw;
-        font-weight: 500;
-        font-size: 2.5vw;
+        font-weight: 200;
+        font-size: 2.2vw;
     }
 
     #std-1 img {
@@ -1909,7 +1964,7 @@ body {
         position: absolute;
         width: 20vw;
         border-bottom: 0.8px solid #fff;
-        right: 42%;
+        right: 46%;
         bottom: 44%;
     }
 
@@ -1923,8 +1978,8 @@ body {
     #std-2 h3 {
         color: white;
         font-size: 4vw;
-        font-weight: 500;
-        font-family: Manrope;
+        font-weight: 400;
+        font-family: Manrope, sans-serif;
     }
 
     #std-2 h3 span {
@@ -1934,7 +1989,7 @@ body {
 
     #std-2 button {
         padding: 1vw 1.5vw;
-        font-size: 2.5vw;
+        font-size: 2.8vw;
         background-color: #fff;
         color: #000;
         border: none;
@@ -1943,7 +1998,7 @@ body {
         margin-top: 4vw;
         display: flex;
         align-items: center;
-        font-weight: 500;
+        font-weight: 600;
         position: relative;
         overflow: hidden;
         transition: all 0.3s ease;
@@ -2149,6 +2204,7 @@ body {
     
     #gallery-filter-container h2 {
         font-size: 6vw;
+        margin-bottom: 5vw;
     }
     
     .filter-btn {
@@ -2488,7 +2544,7 @@ body.menu-open {
         text-decoration: none;
         font-size: 1.7vw;
         font-weight: 600;
-        font-family: Manrope;
+        font-family: Manrope, sans-serif;
         color: #000;
         position: relative;
         transition: all 0.3s ease;
@@ -2583,5 +2639,161 @@ body.menu-open {
         border-bottom: 0.8px solid #fff;
         right: 50%;
         bottom: 42%;
+    }
+}
+
+/* Equipment Showcase Section */
+#equipment-showcase {
+    padding: 100px 30px;
+    background-color: #f8f9fa;
+}
+
+#equipment-showcase h2 {
+    text-align: center;
+    font-size: 2.8vw;
+    margin-bottom: 2vw;
+    color: #1a1a1a;
+}
+
+.equipment-container {
+    max-width: 100%;
+    overflow: hidden;
+    padding: 30px 0;
+}
+
+.equipment-scroll {
+    display: flex;
+    gap: 40px;
+    overflow-x: auto;
+    padding: 30px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Styling the scrollbar */
+.equipment-scroll::-webkit-scrollbar {
+    height: 8px;
+}
+
+.equipment-scroll::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.equipment-scroll::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+}
+
+.equipment-scroll::-webkit-scrollbar-thumb:hover {
+    background: #000;
+}
+
+/* Firefox scrollbar styling */
+.equipment-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #000 #f1f1f1;
+}
+
+.equipment-item {
+    min-width: 350px;
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.equipment-item:hover {
+    transform: translateY(-5px);
+}
+
+.equipment-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.equipment-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.equipment-item h4 {
+    font-size: 1.5rem;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+}
+
+.equipment-item p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Media Queries for Equipment Section */
+@media (max-width: 768px) {
+    #equipment-showcase {
+        padding: 40px 20px;
+    }
+
+    #equipment-showcase h2 {
+        font-size: 2rem;
+    }
+
+    .equipment-item {
+        min-width: 280px;
+        padding: 20px;
+    }
+
+    .equipment-img {
+        height: 200px;
+    }
+
+    .equipment-item h4 {
+        font-size: 1.3rem;
+    }
+
+    .equipment-item p {
+        font-size: 1rem;
+    }
+}
+
+/* Image Loading Optimization */
+.gallery-img, .equipment-img {
+    position: relative;
+    background: #f0f0f0;
+}
+
+.gallery-img::before, .equipment-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.gallery-img img, .equipment-img img {
+    position: relative;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-img img.loaded, .equipment-img img.loaded {
+    opacity: 1;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
     }
 }
